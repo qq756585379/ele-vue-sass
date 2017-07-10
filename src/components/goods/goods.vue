@@ -43,6 +43,7 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll';
+  import Vue from 'vue';
   import Bus from '../../common/js/eventBus';
   import food from 'components/food/food';
   import cartcontrol from 'components/cartcontrol/cartcontrol';

@@ -153,7 +153,8 @@
       },
       enter(el) {
         /* 触发浏览器重绘 */
-//        let rf = el.offsetHeight;
+        /* eslint-disable no-unused-vars */
+        let rf = el.offsetHeight;
 
         this.$nextTick(() => {
           el.style.webkitTransform = 'translate3d(0, 0, 0)';
