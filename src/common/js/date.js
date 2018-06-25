@@ -1,8 +1,4 @@
 /**
- * Created by yangjun on 2017/7/9.
- */
-
-/**
  * 日期格式化
  * @param date 时间戳
  * @param fmt  格式化格式

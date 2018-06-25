@@ -26,7 +26,10 @@
     data() {
       return {
         seller: {
-          id: (() => { let queryParam = urlParse(); return queryParam.id; })()
+          id: (() => {
+            let queryParam = urlParse();
+            return queryParam.id;
+          })()
         }
       };
     },
@@ -47,6 +50,7 @@
 
 <style rel="stylesheet/scss" lang="scss" scope>
   @import "common/scss/mixins";
+
   .tab {
     display: flex;
     width: 100%;

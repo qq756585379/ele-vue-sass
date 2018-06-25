@@ -67,19 +67,23 @@
   import star from 'components/star/star';
   export default {
     props: {
-      seller: { type: Object }
+      seller: {type: Object}
     },
     data() {
-      return { detailShow: false };
+      return {detailShow: false};
     },
     created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     },
     methods: {
-      showDetail() { this.detailShow = true; },
-      hideDetail() { this.detailShow = false; }
+      showDetail() {
+        this.detailShow = true;
+      },
+      hideDetail() {
+        this.detailShow = false;
+      }
     },
-    components: { star }
+    components: {star}
   };
 </script>
 

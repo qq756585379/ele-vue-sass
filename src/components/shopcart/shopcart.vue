@@ -10,12 +10,16 @@
           <div class="price">￥{{ totalPrice }}</div>
           <div class="desc">另需配送费￥{{ deliveryPrice }}元</div>
         </div>
-        <div class="content-right" @click.stop.prevent="pay"><div class="pay" :class="payClass">{{ payDesc }}</div></div>
+        <div class="content-right" @click.stop.prevent="pay">
+          <div class="pay" :class="payClass">{{ payDesc }}</div>
+        </div>
       </div>
       <div class="ball-container">
         <template v-for="ball in balls">
           <transition name="drop" @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter">
-            <div class="ball" v-show="ball.show"><div class="inner inner-hook"></div></div>
+            <div class="ball" v-show="ball.show">
+              <div class="inner inner-hook"></div>
+            </div>
           </transition>
         </template>
       </div>
@@ -30,7 +34,9 @@
               <li class="food border-1px" v-for="food in selectFoods">
                 <span class="name">{{ food.name }}</span>
                 <div class="price">￥{{ food.price * food.count }}</div>
-                <div class="cartcontrol-wrapper"><cartcontrol :food="food" @drop="drop"></cartcontrol></div>
+                <div class="cartcontrol-wrapper">
+                  <cartcontrol :food="food" @drop="drop"></cartcontrol>
+                </div>
               </li>
             </ul>
           </div>
@@ -50,7 +56,9 @@
     props: {
       selectFoods: {
         type: Array,
-        default() { return []; }
+        default() {
+          return [];
+        }
       },
       deliveryPrice: {
         type: Number,
